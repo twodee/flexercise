@@ -94,6 +94,7 @@ function initialize() {
     if (includeWrapCheckbox.checked) {
       expectedState['flex-wrap'] = flexWrapOptions.pick();
       if (expectedState['flex-wrap'] === 'nowrap') {
+        expectedState['justify-content'] = 'flex-start';
         expectedState['align-content'] = 'stretch';
       } else {
         expectedState['align-content'] = alignContentOptions.pick();
