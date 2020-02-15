@@ -30,19 +30,17 @@ body {
   flex: 0 1 0;
   margin-top: 10px;
   display: grid;
-  /* flex-direction: row; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
   grid-template-rows: auto auto;
   grid-auto-flow: column;
   font-family: monospace;
-  justify-items: stretch;
-  align-items: center;
-  justify-content: space-between;
   grid-column-gap: 10px;
-  grid-auto-columns: auto;
-  grid-auto-rows: auto;
-  /* background-color: pink; */
+  justify-items: stretch;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#is-right-checkbox {
+  justify-self: start;
 }
 
 #randomize-button {
@@ -61,7 +59,7 @@ body {
 
 input[type="text"] {
   font-family: monospace;
-  /* width: 100px; */
+  /* width: 30px; */
 }
 
 .panel {
