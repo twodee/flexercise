@@ -7,40 +7,43 @@
 </head>
 <body>
   <div class="root">
-    <div class="options">
-      <label>include reverse: <input id="include-reverse-checkbox" type="checkbox"></label>
-      <label>include wrap: <input id="include-wrap-checkbox" type="checkbox"></label>
-    </div>
-    <div id="panels-root">
-      <div class="panel-sizer">
-        <div id="expected" class="panel"></div>
+    <div class="centered-container">
+      <div class="options">
+        <label>include reverse: <input id="include-reverse-checkbox" type="checkbox"></label>
+        <label>include wrap: <input id="include-wrap-checkbox" type="checkbox"></label>
       </div>
-      <div id="separator"></div>
-      <div class="panel-sizer">
-        <div id="actual" class="panel"></div>
+      <!-- <div id="middle"> -->
+        <div id="panels-root">
+          <div class="panel-sizer">
+            <div id="expected" class="panel"></div>
+          </div>
+          <div id="separator"></div>
+          <div class="panel-sizer">
+            <div id="actual" class="panel"></div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="toolbar">
-      <input id="randomize-button" type="button" value="Randomize">
+      <div class="toolbar">
+        <input id="randomize-button" type="button" value="Randomize">
 
-      <label for="flex-direction-input">flex-direction</label>
-      <input id="flex-direction-input" type="text">
+        <label for="flex-direction-input">flex-direction</label>
+        <input id="flex-direction-input" type="text">
 
-      <label for="flex-wrap-input" id="flex-wrap-label">flex-wrap</label>
-      <input id="flex-wrap-input" type="text">
+        <label for="flex-wrap-input" id="flex-wrap-label">flex-wrap</label>
+        <input id="flex-wrap-input" type="text">
 
-      <label for="align-content-input" id="align-content-label">align-content</label>
-      <input id="align-content-input" type="text">
+        <label for="align-content-input" id="align-content-label">align-content</label>
+        <input id="align-content-input" type="text">
 
-      <label for="justify-content-input">justify-content</label>
-      <input id="justify-content-input" type="text">
+        <label for="justify-content-input">justify-content</label>
+        <input id="justify-content-input" type="text">
 
-      <label for="align-items-input">align-items</label>
-      <input id="align-items-input" type="text">
+        <label for="align-items-input">align-items</label>
+        <input id="align-items-input" type="text">
 
-      <label for="is-right-checkbox">is-right</label>
-      <input id="is-right-checkbox" type="checkbox" onclick="return false;" onfocus="return false;">
-    </div>
+        <label for="is-right-checkbox">is-right</label>
+        <input id="is-right-checkbox" type="checkbox" onclick="return false;" onfocus="return false;">
+      </div>
   </div>
 </body>
 </html>
