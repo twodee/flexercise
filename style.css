@@ -2,13 +2,6 @@ body {
   overscroll-behavior: none;
 }
 
-.options {
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-evenly;
-  font-family: sans-serif;
-}
-
 .root {
   display: flex;
   flex-direction: column;
@@ -26,7 +19,7 @@ body {
 
 .centered-container {
   width: 650px;
-  max-height: 750px;
+  max-height: 650px;
   max-width: 650px;
   flex: 1 1 0;
   display: flex;
@@ -49,30 +42,64 @@ body {
 }
 
 .toolbar {
+  font-family: sans-serif;
   flex: 0 1 0;
   margin-top: 10px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.toolbar-left {
   display: grid;
-  grid-template-rows: auto auto;
-  grid-auto-flow: column;
+  grid-template-columns: auto auto;
+  grid-auto-flow: row;
+  grid-column-gap: 5px;
+  align-content: start;
+}
+
+.toolbar-left input {
+  justify-self: end;
+  margin-right: 0;
+}
+
+.toolbar-right > label, .toolbar-left > label {
+  text-align: right;
+}
+
+.toolbar-right {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-auto-flow: row;
   font-family: monospace;
-  grid-column-gap: 10px;
+  grid-column-gap: 5px;
   justify-items: stretch;
   justify-content: space-between;
   align-items: center;
+  align-content: start;
 }
 
 #is-right-checkbox {
   justify-self: start;
 }
 
+#status {
+  font-size: 32pt;
+  width: 1em;
+}
+
 #randomize-button {
-  grid-row-start: 1;
-  grid-row-end: span 2;
+  grid-column: 1 / span 2;
   background-color: lightblue;
   display: block;
-  height: 100%;
-  width: 100%;
   outline: none;
+  border: 1px solid rgb(30, 50, 200);
+}
+
+#randomize-button:hover {
+  background-color: cornflowerblue;
+  color: white;
 }
 
 #randomize-button:active {

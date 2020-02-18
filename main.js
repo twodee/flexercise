@@ -34,7 +34,7 @@ function initialize() {
   const alignItemsInput = document.getElementById('align-items-input');
   const flexWrapInput = document.getElementById('flex-wrap-input');
   const alignContentInput = document.getElementById('align-content-input');
-  const isRightCheckbox = document.getElementById('is-right-checkbox');
+  const statusLabel = document.getElementById('status');
 
   const includeReverseCheckbox = document.getElementById('include-reverse-checkbox');
   const includeWrapCheckbox = document.getElementById('include-wrap-checkbox');
@@ -111,7 +111,7 @@ function initialize() {
     expectedPanel.style['align-content'] = expectedState['align-content'];
 
     panelsRoot.style['flex-direction'] = expectedState['flex-direction'].startsWith('row') ? 'column' : 'row';
-    isRightCheckbox.checked = isRight();
+    statusLabel.innerHTML = isRight() ? '&#128077;&#127997;' : '&#128078;&#127997;';
   });
 
   const initialStyle = getComputedStyle(actualPanel);
@@ -138,7 +138,7 @@ function initialize() {
         }
         actualPanel.style[property] = prefix + actualState[property];
       }
-      isRightCheckbox.checked = isRight();
+      statusLabel.innerHTML = isRight() ? '&#128077;&#127997;' : '&#128078;&#127997;';
     });
   };
 
