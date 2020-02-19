@@ -18,9 +18,9 @@ body {
 }
 
 .centered-container {
-  width: 650px;
+  width: 850px;
   max-height: 650px;
-  max-width: 650px;
+  max-width: 850px;
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
