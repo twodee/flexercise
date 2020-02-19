@@ -74,6 +74,7 @@ body {
   grid-auto-flow: row;
   font-family: monospace;
   grid-column-gap: 5px;
+  grid-row-gap: 2px;
   justify-items: stretch;
   justify-content: space-between;
   align-items: center;
@@ -103,12 +104,17 @@ body {
 }
 
 #randomize-button:active {
-  background-color: orange;
+  background-color: rgb(100, 100, 150);
 }
 
 input[type="text"] {
   font-family: monospace;
   /* width: 30px; */
+}
+
+input[type="text"]:focus {
+  outline: none;
+  background-color: rgb(240, 240, 240);
 }
 
 .panel {
@@ -139,11 +145,11 @@ input[type="text"] {
 }
 
 #expected {
-  background-color: #E4FFB9;
+  background-color: rgb(230, 230, 230)
 }
 
 #actual {
-  background-color: #B5DEFF;
+  background-color: #D9E6FF;
 }
 
 .tile {
@@ -157,6 +163,11 @@ input[type="text"] {
   font-size: 48px;
   min-height: 54px;
   background-color: cornflowerblue;
+}
+
+#expected > .tile {
+  background-color: rgb(170, 170, 170);
+  color: rgb(80, 80, 80);
 }
 
 .tile:nth-child(2) {

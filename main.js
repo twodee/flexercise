@@ -84,7 +84,7 @@ function initialize() {
 
   reload('none', 4);
 
-  randomizeButton.addEventListener('click', () => {
+  const randomize = () => {
     expectedState = {
       'justify-content': justifyContentOptions.pick(),
       'align-items': alignItemsOptions.pick(),
@@ -112,7 +112,9 @@ function initialize() {
 
     panelsRoot.style['flex-direction'] = expectedState['flex-direction'].startsWith('row') ? 'column' : 'row';
     statusLabel.innerHTML = isRight() ? '&#128077;&#127997;' : '&#128078;&#127997;';
-  });
+  };
+
+  randomizeButton.addEventListener('click', randomize);
 
   const initialStyle = getComputedStyle(actualPanel);
   actualState = {
@@ -147,6 +149,13 @@ function initialize() {
   registerListener(alignItemsInput, 'align-items', alignItemsOptions);
   registerListener(flexWrapInput, 'flex-wrap', flexWrapOptions);
   registerListener(alignContentInput, 'align-content', alignContentOptions);
+
+  alignItemsInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter' && isRight()) {
+      randomize();
+      flexDirectionInput.focus();
+    }
+  });
 }
 
 function isRight() {
