@@ -1,0 +1,9 @@
+{
+  "name": "Flexercise",
+  "version": "0.1.0",
+  "scripts": {
+    "deploy": "ssh twodee \"rm -rf /var/www/flexercise/*\" && scp -r index.html main.js style.css twodee:/var/www/flexercise && ssh twodee \"cd /var/www/flexercise && chmod -R g+rX *\""
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}
